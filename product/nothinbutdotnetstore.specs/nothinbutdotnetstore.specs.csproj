@@ -67,6 +67,9 @@
   <ItemGroup>
     <Compile Include="concepts\CalculatorSpecs.cs" />
     <Compile Include="MessageGeneratorSpecs.cs" />
+    <Compile Include="utility\ObjectFactory.cs" />
+    <Compile Include="web\FrontControllerSpecs.cs" />
+    <Compile Include="web\RawHandlerSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\nothinbutdotnetstore\nothinbutdotnetstore.csproj">
