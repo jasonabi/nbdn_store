@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="concepts\CalculatorSpecs.cs" />
     <Compile Include="MessageGeneratorSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
