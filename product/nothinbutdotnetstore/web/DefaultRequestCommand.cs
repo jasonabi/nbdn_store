@@ -4,6 +4,13 @@ namespace nothinbutdotnetstore.web
 {
     public class DefaultRequestCommand : RequestCommand
     {
+        private RequestSpecification spec;
+
+        public DefaultRequestCommand(RequestSpecification spec)
+        {
+            this.spec = spec;
+        }
+
         public void process(Request request)
         {
             throw new NotImplementedException();
@@ -11,7 +18,7 @@ namespace nothinbutdotnetstore.web
 
         public bool can_process(Request request)
         {
-            throw new NotImplementedException();
+            return spec(request);
         }
     }
 }
