@@ -54,6 +54,7 @@
     <Compile Include="web\DefaultCommandRegistry.cs" />
     <Compile Include="web\DefaultFrontController.cs" />
     <Compile Include="web\FrontController.cs" />
+    <Compile Include="web\MissingCommandFactory.cs" />
     <Compile Include="web\RawHandler.cs" />
     <Compile Include="web\Request .cs" />
     <Compile Include="web\RequestCommand .cs" />

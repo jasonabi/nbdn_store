@@ -40,5 +40,32 @@ namespace nothinbutdotnetstore.specs.web
             static Request request;
             static List<RequestCommand> all_the_commands;
         }
+
+        public class when_attempting_to_get_a_command_for_a_request_and_there_is_not_one : concern
+        {
+            Establish c = () =>
+            {
+                request = an<Request>();
+                missing_command = an<Request>();
+                missing_command_factory = the_dependency<MissingCommandFactory>();
+                all_the_commands = Enumerable.Range(1, 100).Select(x => an<RequestCommand>()).ToList();
+                provide_a_basic_sut_constructor_argument<IEnumerable<RequestCommand>>(all_the_commands);
+
+                missing_command_factory.Stub(x => x.create()).Return(missing_command);
+            };
+
+            Because b = () =>
+                result = sut.get_the_command_that_can_process(request);
+
+            It should_return_the_command_to_the_caller = () =>
+                result.ShouldEqual(the_missing_command);
+
+            static RequestCommand result;
+            static Request request;
+            static List<RequestCommand> all_the_commands;
+            static MissingCommandFactory missing_command_factory;
+            static RequestCommand the_missing_command;
+            static Request missing_command;
+        }
     }
 }

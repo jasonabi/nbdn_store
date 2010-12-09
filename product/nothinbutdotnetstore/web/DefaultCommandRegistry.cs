@@ -6,18 +6,16 @@ namespace nothinbutdotnetstore.web
 {
     public class DefaultCommandRegistry : CommandRegistry
     {
-        private IEnumerable<RequestCommand> _commands;
+        IEnumerable<RequestCommand> commands;
+
         public DefaultCommandRegistry(IEnumerable<RequestCommand> commands)
         {
-            _commands = commands;
+            this.commands = commands;
         }
 
         public RequestCommand get_the_command_that_can_process(Request request)
         {
-            var cmd = from c in _commands
-                      where c.can_process(request)
-                      select c;
-            return cmd.FirstOrDefault();
+            return commands.First(x => x.can_process(request));
 
         }
     }
