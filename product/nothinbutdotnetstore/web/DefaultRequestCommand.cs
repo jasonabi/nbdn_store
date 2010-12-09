@@ -4,11 +4,11 @@ namespace nothinbutdotnetstore.web
 {
     public class DefaultRequestCommand : RequestCommand
     {
-        private RequestSpecification spec;
+        RequestSpecification request_specification;
 
-        public DefaultRequestCommand(RequestSpecification spec)
+        public DefaultRequestCommand(RequestSpecification request_specification)
         {
-            this.spec = spec;
+            this.request_specification = request_specification;
         }
 
         public void process(Request request)
@@ -18,7 +18,7 @@ namespace nothinbutdotnetstore.web
 
         public bool can_process(Request request)
         {
-            return spec(request);
+            return request_specification(request);
         }
     }
 }

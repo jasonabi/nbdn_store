@@ -37,5 +37,23 @@ namespace nothinbutdotnetstore.specs.web
             static Request request;
             static bool was_called;
         }
+        public class when_processing_a_request : concern
+        {
+            Establish c = () =>
+            {
+                request = an<Request>();
+                application_command = the_dependency<ApplicationCommand>();
+            };
+
+            Because b = () =>
+                sut.process(request);
+
+
+            It should_delegate_the_processing_to_the_application_specific_command = () =>
+                application_command.received(x => x.process(request));
+
+            static Request request;
+            static ApplicationCommand application_command;
+        }
     }
 }

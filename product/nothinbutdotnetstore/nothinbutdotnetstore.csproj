@@ -49,6 +49,7 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="web\ApplicationCommand.cs" />
     <Compile Include="web\CommandRegistry.cs" />
     <Compile Include="web\DefaultCommandRegistry.cs" />
     <Compile Include="web\DefaultFrontController.cs" />
