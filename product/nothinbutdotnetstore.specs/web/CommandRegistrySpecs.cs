@@ -45,9 +45,9 @@ namespace nothinbutdotnetstore.specs.web
         {
             Establish c = () =>
             {
+                missing_command_factory = the_dependency<MissingCommandFactory>();
                 request = an<Request>();
                 missing_command = an<RequestCommand>();
-                missing_command_factory = the_dependency<MissingCommandFactory>();
                 all_the_commands = Enumerable.Range(1, 100).Select(x => an<RequestCommand>()).ToList();
                 provide_a_basic_sut_constructor_argument<IEnumerable<RequestCommand>>(all_the_commands);
 
@@ -57,7 +57,7 @@ namespace nothinbutdotnetstore.specs.web
             Because b = () =>
                 result = sut.get_the_command_that_can_process(request);
 
-            It should_return_the_command_to_the_caller = () =>
+            It should_return_the_missing_command_to_the_caller = () =>
                 result.ShouldEqual(missing_command);
 
             static RequestCommand result;

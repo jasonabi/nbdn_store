@@ -49,10 +49,10 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MessageGenerator.cs" />
     <Compile Include="web\CommandRegistry.cs" />
     <Compile Include="web\DefaultCommandRegistry.cs" />
     <Compile Include="web\DefaultFrontController.cs" />
+    <Compile Include="web\DefaultRequestCommand.cs" />
     <Compile Include="web\FrontController.cs" />
     <Compile Include="web\MissingCommandFactory.cs" />
     <Compile Include="web\RawHandler.cs" />

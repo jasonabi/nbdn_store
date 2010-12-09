@@ -4,9 +4,9 @@ namespace nothinbutdotnetstore.web
     {
         CommandRegistry command_registry;
 
-        public DefaultFrontController(CommandRegistry commandRegistry)
+        public DefaultFrontController(CommandRegistry command_registry)
         {
-            this.command_registry = commandRegistry;
+            this.command_registry = command_registry;
         }
 
         public void process(Request request)
