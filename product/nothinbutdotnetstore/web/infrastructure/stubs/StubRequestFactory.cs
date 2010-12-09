@@ -1,3 +1,4 @@
+using System;
 using System.Web;
 using nothinbutdotnetstore.stubs;
 
@@ -13,6 +14,10 @@ namespace nothinbutdotnetstore.web.infrastructure.stubs
 
         class StubRequest : Request
         {
+            public InputModel map<InputModel>()
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }
