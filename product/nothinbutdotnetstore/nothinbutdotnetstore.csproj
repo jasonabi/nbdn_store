@@ -49,7 +49,10 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="stubs\AStub.cs" />
+    <Compile Include="stubs\Stub.cs" />
     <Compile Include="tasks\Repository.cs" />
+    <Compile Include="tasks\stubs\StubRepository.cs" />
     <Compile Include="web\application\model\Department.cs" />
     <Compile Include="web\application\ViewMainDepartmentsInTheStore.cs" />
     <Compile Include="web\infrastructure\ApplicationCommand.cs" />
@@ -65,7 +68,12 @@
     <Compile Include="web\infrastructure\RequestFactory.cs" />
     <Compile Include="web\infrastructure\RequestSpecification.cs" />
     <Compile Include="web\infrastructure\ResponseEngine.cs" />
+    <Compile Include="web\infrastructure\stubs\StubMissingCommandFactory.cs" />
+    <Compile Include="web\infrastructure\stubs\StubRequestFactory.cs" />
+    <Compile Include="web\infrastructure\stubs\StubResponseEngine.cs" />
+    <Compile Include="web\infrastructure\stubs\StubSetOfCommands.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

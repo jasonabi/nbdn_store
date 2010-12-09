@@ -1,5 +1,7 @@
 using nothinbutdotnetstore.tasks;
+using nothinbutdotnetstore.tasks.stubs;
 using nothinbutdotnetstore.web.infrastructure;
+using nothinbutdotnetstore.web.infrastructure.stubs;
 
 namespace nothinbutdotnetstore.web.application
 {
@@ -7,6 +9,11 @@ namespace nothinbutdotnetstore.web.application
     {
         Repository repository;
         ResponseEngine response_engine;
+
+        public ViewMainDepartmentsInTheStore():this(new StubRepository(),
+            new StubResponseEngine())
+        {
+        }
 
         public ViewMainDepartmentsInTheStore(Repository repository, ResponseEngine response_engine)
         {
