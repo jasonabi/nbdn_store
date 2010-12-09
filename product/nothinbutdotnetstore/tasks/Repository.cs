@@ -6,5 +6,6 @@ namespace nothinbutdotnetstore.tasks
     public interface Repository
     {
         IEnumerable<Department> get_all_the_main_departments_in_the_store();
+        IEnumerable<Department> get_all_departments_in(Department department);
     }
 }

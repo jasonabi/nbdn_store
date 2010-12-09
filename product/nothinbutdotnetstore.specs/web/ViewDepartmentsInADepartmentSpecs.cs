@@ -24,16 +24,13 @@ namespace nothinbutdotnetstore.specs.web
                 response_engine = the_dependency<ResponseEngine>();
                 department_repository = the_dependency<Repository>();
                 the_departments = new List<Department>();
+                parent_department = new Department();
                 request = an<Request>();
-                department = an<Department>();
 
-                request.Stub(x => x.get_parameter("department")).Return(
-                    department_id);
+                request.Stub(x => x.map<Department>()).Return(
+                    parent_department);
 
-                department_repository.Stub(x => x.get_department(department_id)).Return(
-                    department);
-
-                department_repository.Stub(x => x.get_departments_in_a_department(department)).Return(
+                department_repository.Stub(x => x.get_all_departments_in(parent_department)).Return(
                     the_departments);
             };
 
@@ -47,8 +44,7 @@ namespace nothinbutdotnetstore.specs.web
             static Request request;
             static IEnumerable<Department> the_departments;
             static ResponseEngine response_engine;
-            private static Department department;
-            private static int department_id;
+            private static Department parent_department;
         }
     }
 }
