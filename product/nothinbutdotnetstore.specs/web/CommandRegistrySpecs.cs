@@ -1,18 +1,17 @@
- using System.Collections.Generic;
- using System.Linq;
- using Machine.Specifications;
- using Machine.Specifications.DevelopWithPassion.Rhino;
- using nothinbutdotnetstore.web;
- using Rhino.Mocks;
+using System.Collections.Generic;
+using System.Linq;
+using Machine.Specifications;
+using Machine.Specifications.DevelopWithPassion.Rhino;
+using nothinbutdotnetstore.web;
+using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.specs.web
-{   
+{
     public class CommandRegistrySpecs
     {
         public abstract class concern : Observes<CommandRegistry,
                                             DefaultCommandRegistry>
         {
-        
         }
 
         [Subject(typeof(DefaultCommandRegistry))]

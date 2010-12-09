@@ -1,0 +1,3 @@
+This is our new config file
+The log level is DEBUG
+The new setting is:this is cool
