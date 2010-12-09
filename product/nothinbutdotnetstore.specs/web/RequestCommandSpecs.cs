@@ -1,6 +1,7 @@
 using Machine.Specifications;
 using Machine.Specifications.DevelopWithPassion.Rhino;
 using nothinbutdotnetstore.web;
+using nothinbutdotnetstore.web.infrastructure;
 
 namespace nothinbutdotnetstore.specs.web
 {

@@ -1,4 +1,4 @@
-namespace nothinbutdotnetstore.web
+namespace nothinbutdotnetstore.web.infrastructure
 {
     public interface CommandRegistry
     {

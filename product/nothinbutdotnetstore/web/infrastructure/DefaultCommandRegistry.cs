@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace nothinbutdotnetstore.web
+namespace nothinbutdotnetstore.web.infrastructure
 {
     public class DefaultCommandRegistry : CommandRegistry
     {

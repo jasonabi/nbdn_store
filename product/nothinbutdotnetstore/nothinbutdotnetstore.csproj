@@ -49,18 +49,19 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="web\ApplicationCommand.cs" />
-    <Compile Include="web\CommandRegistry.cs" />
-    <Compile Include="web\DefaultCommandRegistry.cs" />
-    <Compile Include="web\DefaultFrontController.cs" />
-    <Compile Include="web\DefaultRequestCommand.cs" />
-    <Compile Include="web\FrontController.cs" />
-    <Compile Include="web\MissingCommandFactory.cs" />
-    <Compile Include="web\RawHandler.cs" />
-    <Compile Include="web\Request .cs" />
-    <Compile Include="web\RequestCommand .cs" />
-    <Compile Include="web\RequestFactory.cs" />
-    <Compile Include="web\RequestSpecification.cs" />
+    <Compile Include="web\application\ViewMainDepartmentsInTheStore.cs" />
+    <Compile Include="web\infrastructure\ApplicationCommand.cs" />
+    <Compile Include="web\infrastructure\CommandRegistry.cs" />
+    <Compile Include="web\infrastructure\DefaultCommandRegistry.cs" />
+    <Compile Include="web\infrastructure\DefaultFrontController.cs" />
+    <Compile Include="web\infrastructure\DefaultRequestCommand.cs" />
+    <Compile Include="web\infrastructure\FrontController.cs" />
+    <Compile Include="web\infrastructure\MissingCommandFactory.cs" />
+    <Compile Include="web\infrastructure\RawHandler.cs" />
+    <Compile Include="web\infrastructure\Request .cs" />
+    <Compile Include="web\infrastructure\RequestCommand .cs" />
+    <Compile Include="web\infrastructure\RequestFactory.cs" />
+    <Compile Include="web\infrastructure\RequestSpecification.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

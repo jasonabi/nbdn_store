@@ -1,7 +1,6 @@
-using System;
 using System.Web;
 
-namespace nothinbutdotnetstore.web
+namespace nothinbutdotnetstore.web.infrastructure
 {
     public class RawHandler : IHttpHandler
     {

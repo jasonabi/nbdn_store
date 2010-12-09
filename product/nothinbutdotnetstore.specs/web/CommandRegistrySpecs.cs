@@ -3,6 +3,7 @@ using System.Linq;
 using Machine.Specifications;
 using Machine.Specifications.DevelopWithPassion.Rhino;
 using nothinbutdotnetstore.web;
+using nothinbutdotnetstore.web.infrastructure;
 using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.specs.web
