@@ -28,6 +28,9 @@ namespace nothinbutdotnetstore.specs.web
                 department = an<Department>();
 
                 request.Stub(x => x.get_parameter("department")).Return(
+                    department_id);
+
+                department_repository.Stub(x => x.get_department(department_id)).Return(
                     department);
 
                 department_repository.Stub(x => x.get_departments_in_a_department(department)).Return(
@@ -45,6 +48,7 @@ namespace nothinbutdotnetstore.specs.web
             static IEnumerable<Department> the_departments;
             static ResponseEngine response_engine;
             private static Department department;
+            private static int department_id;
         }
     }
 }
